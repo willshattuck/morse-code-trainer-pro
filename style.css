@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #333;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    text-align: center;
+}
+#letter-display {
+    font-size: 5em;
+    margin: 32px 0;
+    letter-spacing: 0.2em;
+}
+.controls {
+    margin-top: 24px;
+}
+button {
+    font-size: 1.2em;
+    padding: 10px 24px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 6px;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:disabled {
+    background: #888;
+    cursor: not-allowed;
+}
+input[type=range] {
+    width: 100%;
+    margin: 16px 0;
+}
+
+#char-space-slider {
+    margin-bottom: 8px;
+}
+
+#freq-slider {
+    margin-bottom: 8px;
+}
+
+#toggle-display-btn, #toggle-speech-btn {
+    margin: 8px 4px;
+    background: #2196f3;
+}
+#toggle-display-btn.active {
+    background: #f44336;
+}
+#toggle-speech-btn.active {
+    background: #4caf50;
+}
+#speech-delay-slider {
+    margin-bottom: 8px;
+}
+}
+}
+}
+label {
+    font-size: 1em;
+}

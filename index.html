@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Trainer Pro</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Morse Code Trainer Pro</h1>
+        <div id="letter-display">?</div>
+        <input type="range" id="wpm-slider" min="5" max="30" value="15">
+        <label for="wpm-slider">WPM: <span id="wpm-value">15</span></label>
+    <input type="range" id="char-space-slider" min="0" max="5000" value="1000" step="250">
+    <label for="char-space-slider">Extra space between characters (ms): <span id="char-space-value">1000</span></label>
+    <input type="range" id="freq-slider" min="500" max="750" step="50" value="600">
+    <label for="freq-slider">Tone frequency (Hz): <span id="freq-value">600</span></label>
+        <div class="controls">
+            <button id="start-btn">Start</button>
+            <button id="stop-btn" disabled>Stop</button>
+            <button id="toggle-display-btn">Hide Character</button>
+            <button id="toggle-speech-btn">Speak Letter: Off</button>
+        </div>
+    <input type="range" id="speech-delay-slider" min="0" max="3000" step="250" value="1000">
+    <label for="speech-delay-slider">Speech delay (ms): <span id="speech-delay-value">1000</span></label>
+    <br>
+    <label for="voice-select">Speech voice:</label>
+    <select id="voice-select"></select>
+        </div>
+    </div>
+        <script src="app.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('service-worker.js');
+                });
+            }
+        </script>
+</body>
+</html>
